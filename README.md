@@ -13,6 +13,35 @@ Just enter :
 python main.py -h
 ```
 to see all options.
+```
+usage: main.py [-h] [-d DEVICES [DEVICES ...]] [-cs [2-20]] [-bs {0.25,0.5,0.75,1}] [-fs {4000,8000,16000,32000,44100}] [-sc {Y,N}] [-srv SERVER]
+               [-p [1-65536]] [-s {Y,N}] [-v {Y,N}]
+
+Real time audio mood analysis sent via OSC
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DEVICES [DEVICES ...], --devices DEVICES [DEVICES ...]
+                        IPs to Yeelight device(s) to use
+  -cs [2-20], --capture [2-20]
+                        Number of second to capture, default to 5
+  -bs {0.25,0.5,0.75,1}, --blocksize {0.25,0.5,0.75,1}
+                        Recording block size, default to 1
+  -fs {4000,8000,16000,32000,44100}, --samplingrate {4000,8000,16000,32000,44100}
+                        Sample rate, default to 8KHz
+  -sc {Y,N}, --screen {Y,N}
+                        display color window, default to N
+  -srv SERVER, --server SERVER
+                        IP of the OSC server, default to 127.0.0.1
+  -p [1-65536], --port [1-65536]
+                        port number, default to 12000
+  -s {Y,N}, --send {Y,N}
+                        send to OSC, default to Y
+  -v {Y,N}, --verbose {Y,N}
+                        display verbose informations, default to N
+```
+
+
 
 ### Python modules 
 
