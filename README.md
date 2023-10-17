@@ -13,3 +13,7 @@ Just enter :
 python main.py -h
 ```
 to see all options.
+
+### Infos:
+
+Trained models scikit-learn==0.23.2
