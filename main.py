@@ -290,8 +290,10 @@ if __name__ == "__main__":
     
     if args.devices:
         devices = args.devices
+        use_yeelight_bulbs = True
     else:
         devices = []
+        use_yeelight_bulbs = False
         
     if fs != 8000:
         print("Warning! Segment classifiers have been trained on 8KHz samples."
@@ -300,4 +302,4 @@ if __name__ == "__main__":
     if args.send == 'Y':
         client = udp_client.SimpleUDPClient(args.server, args.port)
               
-    record_audio(args.blocksize, devices, True, fs)
+    record_audio(args.blocksize, devices, use_yeelight_bulbs, fs)
