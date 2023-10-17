@@ -19,3 +19,5 @@ to see all options.
 Trained models scikit-learn==0.23.2
 
 A 5 seconds delay is present, necessary time to capture and estimate mood.
+
+Confirmed to work with python 3.8.9, other versions need deep analysis.
