@@ -44,6 +44,9 @@ optional arguments:
                         display verbose informations, default to N
 ```
 
+## Demo
+
+https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/75f0d9dd-4aa1-4d72-91fd-24a6bf756cdd
 
 
 ### Python modules 
