@@ -71,7 +71,7 @@ pip                 23.3
 ** PyAudio             0.2.13
 ** pyAudioAnalysis     0.3.6
 ** pydub               0.25.1
-pyparsing           3.1.1
+** pyparsing           3.1.1
 pypiwin32           223
 python-dateutil     2.8.2
 ** python-osc          1.8.3
