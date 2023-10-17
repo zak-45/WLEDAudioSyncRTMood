@@ -9,7 +9,7 @@ See this repo : https://github.com/tyiannak/color_your_music_mood for more infor
 Additional to that, some features has been added and the main one is to send datas & color to OSC server.
 
 Just enter :
-
+```
 python main.py -h
-
+```
 to see all options.
