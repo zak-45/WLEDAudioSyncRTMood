@@ -30,6 +30,7 @@ fs = 8000
 FORMAT = pyaudio.paInt16
 
 global client
+global delay
 
 """
 Load 2D image of the valence-arousal representation and define coordinates
@@ -135,6 +136,9 @@ def record_audio(block_size, devices, use_yeelight_bulbs=False, fs=8000):
      mt_win_va, mt_step_va, st_win_va, st_step_va, _] = \
         aT.load_model("valence")
 
+
+    print("Real time audio mood analysis running ...")
+
     while 1:
         block = stream.read(mid_buf_size)
         count_b = len(block) / 2
@@ -143,7 +147,7 @@ def record_audio(block_size, devices, use_yeelight_bulbs=False, fs=8000):
         cur_win = list(shorts)
         mid_buf = mid_buf + cur_win
         del cur_win
-        if len(mid_buf) >= 5 * fs:
+        if len(mid_buf) >= delay * fs:
             # data-driven time
             x = numpy.int16(mid_buf)
             seg_len = len(x)
@@ -258,6 +262,10 @@ def parse_arguments():
                                                          "audio mood analysis sent via OSC")
     record_analyze.add_argument("-d", "--devices", nargs="+",
                                   help="IPs to Yeelight device(s) to use")
+    record_analyze.add_argument("-cs", "--capture", type=int,
+                                  choices=range(2,20),
+                                  metavar="[2-20]",
+                                  default=5, help="Number of second to capture, default to 5")                                  
     record_analyze.add_argument("-bs", "--blocksize",
                                   type=float,
                                   choices=[0.25, 0.5, 0.75, 1],
@@ -287,6 +295,7 @@ def parse_arguments():
 if __name__ == "__main__":
     args = parse_arguments()
     fs = args.samplingrate
+    delay = args.capture
     
     if args.devices:
         devices = args.devices
