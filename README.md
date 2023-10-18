@@ -1,4 +1,4 @@
-## WLEDAudioSyncRTMood
+# WLEDAudioSyncRTMood
 
 Real Time Music mood detection. Generating colors based on. Send data to OSC server.
 
@@ -42,6 +42,20 @@ optional arguments:
                         send to OSC, default to Y
   -v {Y,N}, --verbose {Y,N}
                         display verbose informations, default to N
+```
+
+## Install
+
+Manual (all OS) :
+```
+you need python 3.8.x (other version should work but need to be investigated)
+install all modules with ** (required) by using pip command.
+```
+Windows :
+
+Just run : https://github.com/zak-45/WLEDAudioSyncRTMood/releases/download/1.0/WLEDAudioSyncRTMood.exe
+```
+this will install Portable Python v3.8.9 with all necessary modules
 ```
 
 ## Demo
