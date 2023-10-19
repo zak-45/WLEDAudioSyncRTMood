@@ -58,6 +58,26 @@ Just run : https://github.com/zak-45/WLEDAudioSyncRTMood/releases/download/1.0/W
 this will install Portable Python v3.8.9 with all necessary modules,
 so you can have it running in few minutes.
 ```
+## Run it 
+
+How to run the python file :
+
+Any OS:
+```
+python main.py -v Y -sc Y
+```
+
+For Win Portable version : 
+
+Execute : _your installation folder_\WPy64-3890\WinPython Command Prompt.exe
+
+This will open python terminal window under this folder:
+_your installation folder_\WPy64-3890\scripts>
+
+Type this command:
+```
+python ..\color_your_music_mood\main.py -v Y -sc Y
+```
 
 ## Demo
 
