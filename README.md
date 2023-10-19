@@ -1,12 +1,12 @@
 # WLEDAudioSyncRTMood
 
 Real Time Music mood detection. Generating colors based on. Send data to OSC server.
-
+---
 ![Plutchik-wheel svg](https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/fd85b287-be90-49cb-9512-1c3dc872f9e9)
 
+_Machine Elf 1735, Public domain, via Wikimedia Commons_
 
-
-
+---
 ![image](https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/640b9066-5b66-4867-83c3-49d6bb669354)
 
 
