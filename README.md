@@ -55,7 +55,8 @@ Windows :
 
 Just run : https://github.com/zak-45/WLEDAudioSyncRTMood/releases/download/1.0/WLEDAudioSyncRTMood.exe
 ```
-this will install Portable Python v3.8.9 with all necessary modules
+this will install Portable Python v3.8.9 with all necessary modules,
+so you can have it running in few minutes.
 ```
 
 ## Demo
