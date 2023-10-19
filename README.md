@@ -63,6 +63,7 @@ so you can have it running in few minutes.
 
 https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/75f0d9dd-4aa1-4d72-91fd-24a6bf756cdd
 
+Youtube : https://youtu.be/x5OvCFWevbo?feature=shared
 
 ### Python modules 
 
