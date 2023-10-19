@@ -50,6 +50,7 @@ Manual (all OS) :
 ```
 you need python 3.8.x (other version should work but need to be investigated)
 install all modules with ** (required) by using pip command.
+Create a folder and put this repository on it.
 ```
 Windows :
 
