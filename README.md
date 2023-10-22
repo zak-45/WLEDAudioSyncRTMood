@@ -91,7 +91,7 @@ Youtube : https://youtu.be/x5OvCFWevbo?feature=shared
 
 ### Python modules 
 
-This is the name and version of python modules present on the Windows portable version
+This is the name and version of python modules found on the Windows portable version
 ```
 colorama            0.4.6
 contourpy           1.1.1
