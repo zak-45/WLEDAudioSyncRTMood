@@ -52,6 +52,15 @@ optional arguments:
 Manual (all OS) :
 ```
 you need python 3.8.x (other version should work but need to be investigated)
+
+For linux :
+          sudo apt-get update
+          sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+          sudo apt-get install ffmpeg
+For macOs :
+          brew update
+          brew install portaudio
+
 install all modules with ** (required) by using pip command.
 Create a folder and put this repository on it.
 ```
