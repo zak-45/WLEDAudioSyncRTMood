@@ -70,6 +70,6 @@ jobs:
         with:
           name: ${{ runner.os }} Build
           path: |
-            build/*.exe
-            build/*.bin
+            build/WLEDAudioSyncRTMood.exe
+            build/WLEDAudioSyncRTMood
             build/*.app/**/*
