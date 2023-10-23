@@ -113,7 +113,7 @@ filetype            1.2.0
 fonttools           4.43.1
 future              0.18.3
 importlib-resources 6.1.0
-joblib              1.3.2
+** joblib              1.2.0
 kiwisolver          1.4.5
 ** matplotlib          3.5.0
 msvc-runtime        14.28.29910
