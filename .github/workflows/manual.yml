@@ -24,8 +24,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        # os: [windows-latest,macos-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -39,6 +38,11 @@ jobs:
           sudo apt-get install libasound-dev
           sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
           sudo apt-get install ffmpeg
+
+      - name: MacOS specific
+        if: matrix.os == 'macos-latest'
+        run: |
+          brew install portaudio
           
       - name: Setup Python
         uses: actions/setup-python@v4
