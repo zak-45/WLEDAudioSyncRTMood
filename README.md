@@ -118,7 +118,7 @@ kiwisolver          1.4.5
 ** matplotlib          3.5.0
 msvc-runtime        14.28.29910
 ** numpy               1.19.0
-** opencv-python       4.2.0.34
+** opencv-python       4.8.1.78
 packaging           23.2
 Pillow              10.1.0
 pip                 23.3
