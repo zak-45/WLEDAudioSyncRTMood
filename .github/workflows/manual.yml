@@ -10,9 +10,9 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
+        description: 'Tag'
         # Default value if no value is explicitly provided
-        default: 'World'
+        default: '1.0'
         # Input has to be provided for the workflow to run
         required: true
         # The data type of the input
@@ -33,6 +33,10 @@ jobs:
       - name: Check-out repository
         uses: actions/checkout@v3
 
+      - name: Ubuntu specific
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get install libasound-dev
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
