@@ -37,6 +37,9 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           sudo apt-get install libasound-dev
+          sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+          sudo apt-get install ffmpeg libav-tools
+          
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
