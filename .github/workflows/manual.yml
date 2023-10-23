@@ -63,7 +63,7 @@ jobs:
           nuitka-version: main
           script-name: main.py
           onefile: true
-          output-filename: WLEDAudioSyncRTMood
+          output-file: WLEDAudioSyncRTMood
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
