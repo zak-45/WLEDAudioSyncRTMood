@@ -133,7 +133,7 @@ python-dateutil     2.8.2
 pywin32             306
 ** scikit-learn        0.23.2
 ** scipy               1.5.2
-setuptools          56.0.0
+setuptools          68.2.2
 setuptools-scm      8.0.4
 six                 1.16.0
 sqlite-bro          0.9.1
