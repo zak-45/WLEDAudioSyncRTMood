@@ -36,7 +36,7 @@ global delay
 Load 2D image of the valence-arousal representation and define coordinates
 of emotions and respective colors
 """
-img = cv2.cvtColor(cv2.imread("assets/music_color_mood.png"),
+img = cv2.cvtColor(cv2.imread("./assets/music_color_mood.png"),
                    cv2.COLOR_BGR2RGB)
 
 """
@@ -128,15 +128,15 @@ def record_audio(block_size, devices, use_yeelight_bulbs=False, fs=8000):
 
     # load segment model
     [classifier, mu, std, class_names,
-     mt_win, mt_step, st_win, st_step, _] = aT.load_model("assets/model")
+     mt_win, mt_step, st_win, st_step, _] = aT.load_model("./assets/model")
 
     [clf_energy, mu_energy, std_energy, class_names_energy,
      mt_win_en, mt_step_en, st_win_en, st_step_en, _] = \
-        aT.load_model("assets/energy")
+        aT.load_model("./assets/energy")
 
     [clf_valence, mu_valence, std_valence, class_names_valence,
      mt_win_va, mt_step_va, st_win_va, st_step_va, _] = \
-        aT.load_model("assets/valence")
+        aT.load_model("./assets/valence")
 
 
     print("Real time audio mood analysis running ...")
