@@ -10,9 +10,9 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Tag'
+        description: 'Input Tag'
         # Default value if no value is explicitly provided
-        default: '1.0'
+        default: 'v1.0'
         # Input has to be provided for the workflow to run
         required: true
         # The data type of the input
@@ -77,3 +77,10 @@ jobs:
             build/*.app/**/*
             build/*.bin
             
+      - name: Create Release with Builds
+        uses: ncipollo/release-action@v1
+        with:
+          commit: true
+          tag: name
+          artifacts:  ${{ runner.os }} Build
+        
