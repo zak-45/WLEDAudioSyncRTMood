@@ -80,6 +80,7 @@ jobs:
       - name: Create Release with Builds
         uses: ncipollo/release-action@v1
         with:
+          allowUpdates: true
           commit: true
           tag: ${{ vars.MYTAG }}
           artifacts:  ${{ runner.os }} Build
