@@ -22,6 +22,8 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: write
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
