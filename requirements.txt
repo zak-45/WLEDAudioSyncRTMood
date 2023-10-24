@@ -12,3 +12,4 @@ eyed3==0.9.7
 pydub==0.25.1
 pyparsing==3.1.1
 tqdm==4.66.1
+setuptools==68.2.2
