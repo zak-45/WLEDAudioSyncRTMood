@@ -81,6 +81,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           commit: true
-          tag: INPUT_MYTAG
+          tag: $INPUT_MYTAG
           artifacts:  ${{ runner.os }} Build
         
