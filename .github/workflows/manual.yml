@@ -64,7 +64,7 @@ jobs:
           nuitka-version: main
           script-name: main.py          
           onefile: true
-          include-package-data: true
+          include-package-data: ../.
           output-file: WLEDAudioSyncRTMood
 
       - name: Upload Artifacts
