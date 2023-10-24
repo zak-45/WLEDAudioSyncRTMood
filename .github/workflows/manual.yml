@@ -82,6 +82,6 @@ jobs:
         with:
           allowUpdates: true
           commit: true
-          tag: ${{ vars.MYTAG }}
+          tag: "v1.0"
           artifacts:  ${{ runner.os }} Build
         
