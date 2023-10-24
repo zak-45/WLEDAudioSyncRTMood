@@ -24,7 +24,8 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        # os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [windows-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -61,9 +62,9 @@ jobs:
         uses: Nuitka/Nuitka-Action@v0.6
         with:
           nuitka-version: main
-          script-name: main.py
-          standalone: true
+          script-name: main.py          
           onefile: true
+          include-data-dir: /
           output-file: WLEDAudioSyncRTMood
 
       - name: Upload Artifacts
