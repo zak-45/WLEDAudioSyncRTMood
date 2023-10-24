@@ -83,7 +83,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          commit: true
           tag: "v1.0"
           artifacts:  ${{ runner.os }} Build
         
