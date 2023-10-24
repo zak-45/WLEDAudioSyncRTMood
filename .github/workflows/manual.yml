@@ -84,5 +84,7 @@ jobs:
         with:
           allowUpdates: true
           tag: "v1.0"
-          artifacts:  ${{ runner.os }} Build
+          artifacts: |
+            build/WLEDAudioSyncRTMood.exe
+            build/WLEDAudioSyncRTMood
         
