@@ -62,6 +62,7 @@ jobs:
         with:
           nuitka-version: main
           script-name: main.py
+          standalone: true
           onefile: true
           output-file: WLEDAudioSyncRTMood
 
@@ -73,3 +74,5 @@ jobs:
             build/WLEDAudioSyncRTMood.exe
             build/WLEDAudioSyncRTMood
             build/*.app/**/*
+            build/*.bin
+            
