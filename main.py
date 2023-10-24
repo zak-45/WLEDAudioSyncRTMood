@@ -7,6 +7,7 @@ If available, it can even set your Yeelight Bulb color
 Calculated datas, include color in R G B format, will be JSON formated
 and sent to OSC server.
 """
+import os
 import sys
 import numpy
 import argparse
@@ -33,10 +34,17 @@ global client
 global delay
 
 """
+necessary to be able to load file when using nuitka --nofile option 
+"""
+def load_file(file_name: str) -> str:
+        return os.path.join(os.path.dirname(__file__), file_name)
+
+
+"""
 Load 2D image of the valence-arousal representation and define coordinates
 of emotions and respective colors
 """
-img = cv2.cvtColor(cv2.imread("./assets/music_color_mood.png"),
+img = cv2.cvtColor(cv2.imread(load_file("./assets/music_color_mood.png")),
                    cv2.COLOR_BGR2RGB)
 
 """
@@ -128,15 +136,15 @@ def record_audio(block_size, devices, use_yeelight_bulbs=False, fs=8000):
 
     # load segment model
     [classifier, mu, std, class_names,
-     mt_win, mt_step, st_win, st_step, _] = aT.load_model("./assets/model")
+     mt_win, mt_step, st_win, st_step, _] = aT.load_model(load_file("./assets/model"))
 
     [clf_energy, mu_energy, std_energy, class_names_energy,
      mt_win_en, mt_step_en, st_win_en, st_step_en, _] = \
-        aT.load_model("./assets/energy")
+        aT.load_model(load_file("./assets/energy"))
 
     [clf_valence, mu_valence, std_valence, class_names_valence,
      mt_win_va, mt_step_va, st_win_va, st_step_va, _] = \
-        aT.load_model("./assets/valence")
+        aT.load_model(load_file("./assets/valence"))
 
 
     print("Real time audio mood analysis running ...")
