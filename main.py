@@ -49,7 +49,6 @@ def prog_restart():
         print(sys.argv)
         os.execv(sys.executable, [os.path.basename(sys.executable)] + sys.argv)
     else:
-        sys.argv.pop(0)
         print(sys.argv)        
         os.execv(sys.executable, sys.argv)
 
