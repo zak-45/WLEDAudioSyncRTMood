@@ -29,11 +29,11 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
         
     runs-on: ${{ matrix.os }}
-
+    env:
+      cfilename: WLEDAudioSync
+      
     steps:
       - name: Check-out repository
-        env:
-          cfilename: WLEDAudioSync-Win
         uses: actions/checkout@v3
 
       - name: Ubuntu specific
