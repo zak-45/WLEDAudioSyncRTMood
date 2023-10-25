@@ -73,15 +73,15 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{runner.os}} Build
-          if-no-files-found: ignore
-          path: 'build/WLEDAudioSyncRTMood-${{runner.os}}*'
+          if-no-files-found: warning
+          path: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
             
       - name: Create Release with Builds
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          if-no-files-found: ignore
+          if-no-files-found: warning
           commit: main
           tag: ${{github.event.inputs.mytag}}
-          artifacts: 'build/WLEDAudioSyncRTMood-${{runner.os}}*'
+          artifacts: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
             
