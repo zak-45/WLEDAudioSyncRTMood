@@ -309,9 +309,9 @@ def parse_arguments():
                                   choices=['Y','N'],
                                   default='N', help="display verbose informations, default to N")
     record_analyze.add_argument("-r", "--restart", type=int,
-                                  choices=range(2,3601),
-                                  metavar="[2-3600]",
-                                  default=120, help="Number of x * 5s before restarting prog..  default to 120 --> '10 minutes'")
+                                  choices=range(0,3601),
+                                  metavar="[0-3600]",
+                                  default=120, help="Number of x * 5s before restarting prog , 0 for never..  default to 120 --> '10 minutes'")
     return record_analyze.parse_args()
 
 
