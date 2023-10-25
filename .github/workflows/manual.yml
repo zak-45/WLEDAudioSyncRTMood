@@ -60,7 +60,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           
-      - name: Build Executable
+      - name: Build Executable for ${{runner.os}}
         uses: Nuitka/Nuitka-Action@v0.6
         with:
           nuitka-version: main
