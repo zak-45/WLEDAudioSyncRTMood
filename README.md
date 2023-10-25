@@ -20,8 +20,9 @@ python main.py -h
 ```
 to see all options.
 ```
-usage: main.py [-h] [-d DEVICES [DEVICES ...]] [-cs [2-20]] [-bs {0.25,0.5,0.75,1}] [-fs {4000,8000,16000,32000,44100}] [-sc {Y,N}] [-srv SERVER]
-               [-p [1-65536]] [-s {Y,N}] [-v {Y,N}]
+usage: main.py [-h] [-d DEVICES [DEVICES ...]] [-cs [2-20]] [-bs {0.25,0.5,0.75,1}]
+               [-fs {4000,8000,16000,32000,44100}] [-sc {Y,N}] [-srv SERVER] [-p [1-65536]] [-s {Y,N}] [-v {Y,N}]
+               [-r [2-3600]]
 
 Real time audio mood analysis sent via OSC
 
@@ -45,12 +46,26 @@ optional arguments:
                         send to OSC, default to Y
   -v {Y,N}, --verbose {Y,N}
                         display verbose informations, default to N
+  -r [2-3600], --restart [2-3600]
+                        Number of x * 5s before restarting prog.. default to 120 --> '10 minutes'
 ```
 
 ## Install
 
+Windows / Mac / Linux :
+
+Go to : https://github.com/zak-45/WLEDAudioSyncRTMood/releases
+```
+
+Download WLEDAudioSyncRTMood file for your OS.
+This is a Portable application (no need to be installed) with Python v3.x.x and all necessary modules,
+so you can have it running in few minutes.
+
+```
+
 Manual (all OS) :
 ```
+
 you need python 3.8.x (other version should work but need to be investigated)
 
 For linux :
@@ -61,35 +76,25 @@ For macOs :
           brew update
           brew install portaudio
 
-install all modules with ** (required) by using pip command.
 Create a folder and put this repository on it.
-```
-Windows :
+install all modules with ** (required) by using pip command.
+  you can do : pip install -r requirements.txt
 
-Just run : https://github.com/zak-45/WLEDAudioSyncRTMood/releases/download/1.0/WLEDAudioSyncRTMood.exe
 ```
-this will install Portable Python v3.8.9 with all necessary modules,
-so you can have it running in few minutes.
-```
+
 ## Run it 
+
+For all WLEDAudioSyncRTMood portable version:
+```
+Put your donwloaded file on a nice folder (stay organized) and ...
+just run it ! 
+```
 
 How to run the python file :
 
 Any OS:
 ```
 python main.py -v Y -sc Y
-```
-
-For Win Portable version : 
-
-Execute : _your installation folder_\WPy64-3890\WinPython Command Prompt.exe
-
-This will open python terminal window under this folder:
-_your installation folder_\WPy64-3890\scripts>
-
-Type this command:
-```
-python ..\color_your_music_mood\main.py -v Y -sc Y
 ```
 
 ## Demo
