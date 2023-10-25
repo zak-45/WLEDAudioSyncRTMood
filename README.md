@@ -46,7 +46,7 @@ optional arguments:
                         send to OSC, default to Y
   -v {Y,N}, --verbose {Y,N}
                         display verbose informations, default to N
-  -r [2-3600], --restart [0-3600]
+  -r [0-3600], --restart [0-3600]
                         Number of x * 5s before restarting prog , 0 for never..  default to 120 --> '10 minutes'
 ```
 
