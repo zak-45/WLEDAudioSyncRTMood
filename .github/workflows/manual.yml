@@ -80,7 +80,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          if-no-files-found: warn
           commit: main
           tag: ${{github.event.inputs.mytag}}
           artifacts: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
