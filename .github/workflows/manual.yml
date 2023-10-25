@@ -84,8 +84,4 @@ jobs:
           allowUpdates: true
           commit: main
           tag: ${{github.event.inputs.mytag}}
-          artifacts: |
-            build/WLEDAudioSyncRTMood-${{runner.os}}
-            build/WLEDAudioSyncRTMood-${{runner.os}}.exe
-            
-          
+          artifacts: build/WLEDAudioSyncRTMood-${{runner.os}}.*
