@@ -45,7 +45,12 @@ restart script to free memory
 """
 def prog_restart():
     print("restarting ....")
-    os.execv(sys.executable, [os.path.basename(sys.executable)] + sys.argv)
+    print(sys.executable)
+    print([os.path.basename(sys.executable)])
+    if "python" in sys.executable:
+        os.execv(sys.executable, [os.path.basename(sys.executable)] + sys.argv)
+    else:
+        os.execv(sys.executable, sys.argv.pop(0))
 
 """
 Load 2D image of the valence-arousal representation and define coordinates
