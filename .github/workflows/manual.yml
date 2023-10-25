@@ -67,16 +67,13 @@ jobs:
           script-name: main.py          
           onefile: true
           include-data-dir: assets=assets
-          # output-file: WLEDAudioSyncRTMood-${{runner.os}}
+          output-file: WLEDAudioSyncRTMood-${{runner.os}}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: ${{runner.os}} Build
-          path: |
-            build/*.exe
-            build/*.bin
-            build/*.app/**/*
+          path: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
             
       - name: Create Release with Builds
         uses: ncipollo/release-action@v1
@@ -84,8 +81,5 @@ jobs:
           allowUpdates: true
           commit: main
           tag: ${{github.event.inputs.mytag}}
-          artifacts: |
-            build/*.exe
-            build/*.bin
-            build/*.app/**/*
+          artifacts: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
             
