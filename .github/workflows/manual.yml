@@ -33,13 +33,13 @@ jobs:
     steps:
       - name: Check-out repository
         env:
-          cfilename: WLEDAudioSync
+          cfilename: WLEDAudioSync-Win
         uses: actions/checkout@v3
 
       - name: Ubuntu specific
         if: matrix.os == 'ubuntu-latest'
         env : 
-          cfilename: WLEDAudioSync.bin
+          cfilename: WLEDAudioSync-Linux.bin
         run: |
           sudo apt-get update
           sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
@@ -48,7 +48,7 @@ jobs:
       - name: MacOS specific
         if: matrix.os == 'macos-latest'
         env : 
-          cfilename: WLEDAudioSync.app        
+          cfilename: WLEDAudioSync-McOS.app        
         run: |
           brew update
           brew install portaudio
@@ -87,9 +87,7 @@ jobs:
       - name: Create Release with Builds
         uses: ncipollo/release-action@v1
         with:
-          allowUpdates: true
+          allowUpdates: false
           commit: main
           tag: ${{ github.event.inputs.mytag }}
-          artifacts: |
-            build/WLEDAudioSyncRTMood.exe
-            build/WLEDAudioSyncRTMood
+          artifacts: build/${{ env.cfilename }}
