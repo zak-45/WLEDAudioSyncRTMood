@@ -89,6 +89,11 @@ For all WLEDAudioSyncRTMood portable version:
 Put your donwloaded file on a nice folder (stay organized) and ...
 just run it ! 
 ```
+Windows example:
+
+![image](https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/c0eda3e2-0e5c-47e5-84cb-a44d5bc91646)
+
+
 
 For Manual install:
 
