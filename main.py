@@ -32,6 +32,7 @@ FORMAT = pyaudio.paInt16
 
 global client
 global delay
+global restart
 
 """
 necessary to be able to load file when using nuitka --nofile option 
@@ -39,6 +40,12 @@ necessary to be able to load file when using nuitka --nofile option
 def load_file(file_name: str) -> str:
         return os.path.join(os.path.dirname(__file__), file_name)
 
+"""
+restart script to free memory
+"""
+def prog_restart():
+    print("restarting ....")
+    os.execv(sys.executable, [os.path.basename(sys.executable)] + sys.argv)
 
 """
 Load 2D image of the valence-arousal representation and define coordinates
@@ -265,6 +272,9 @@ def record_audio(block_size, devices, use_yeelight_bulbs=False, fs=8000):
 
             cv2.waitKey(10)
             count += 1
+            # print(count)
+            if (count == restart):
+                prog_restart()
 
 
 def parse_arguments():
@@ -275,7 +285,7 @@ def parse_arguments():
     record_analyze.add_argument("-cs", "--capture", type=int,
                                   choices=range(2,20),
                                   metavar="[2-20]",
-                                  default=5, help="Number of second to capture, default to 5")                                  
+                                  default=5, help="Number of second to capture, default to 5")
     record_analyze.add_argument("-bs", "--blocksize",
                                   type=float,
                                   choices=[0.25, 0.5, 0.75, 1],
@@ -289,7 +299,7 @@ def parse_arguments():
     record_analyze.add_argument("-srv", "--server",
                                   default='127.0.0.1', help="IP of the OSC server, default to 127.0.0.1")
     record_analyze.add_argument("-p", "--port", type=int,
-                                  choices=range(1,65536),
+                                  choices=range(1,65537),
                                   metavar="[1-65536]",
                                   default=12000, help="port number, default to 12000")
     record_analyze.add_argument("-s", "--send",
@@ -298,7 +308,10 @@ def parse_arguments():
     record_analyze.add_argument("-v", "--verbose",
                                   choices=['Y','N'],
                                   default='N', help="display verbose informations, default to N")
-                                  
+    record_analyze.add_argument("-r", "--restart", type=int,
+                                  choices=range(2,3601),
+                                  metavar="[2-3600]",
+                                  default=120, help="Number of x * 5s before restarting prog..  default to 120 --> '10 minutes'")
     return record_analyze.parse_args()
 
 
@@ -306,6 +319,7 @@ if __name__ == "__main__":
     args = parse_arguments()
     fs = args.samplingrate
     delay = args.capture
+    restart = args.restart
     
     if args.devices:
         devices = args.devices
