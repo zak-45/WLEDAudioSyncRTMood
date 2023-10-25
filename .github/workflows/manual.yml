@@ -32,10 +32,14 @@ jobs:
 
     steps:
       - name: Check-out repository
+        env:
+          cfilename: WLEDAudioSync
         uses: actions/checkout@v3
 
       - name: Ubuntu specific
         if: matrix.os == 'ubuntu-latest'
+        env : 
+          cfilename: WLEDAudioSync.bin
         run: |
           sudo apt-get update
           sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
@@ -43,6 +47,8 @@ jobs:
 
       - name: MacOS specific
         if: matrix.os == 'macos-latest'
+        env : 
+          cfilename: WLEDAudioSync.app        
         run: |
           brew update
           brew install portaudio
@@ -67,7 +73,7 @@ jobs:
           script-name: main.py          
           onefile: true
           include-data-dir: assets=assets
-          output-file: WLEDAudioSyncRTMood
+          output-file: ${{ env.cfilename }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
@@ -82,6 +88,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
+          commit: main
           tag: ${{ github.event.inputs.mytag }}
           artifacts: |
             build/WLEDAudioSyncRTMood.exe
