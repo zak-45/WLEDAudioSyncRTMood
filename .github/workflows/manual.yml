@@ -73,11 +73,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{runner.os}} Build
-          path: |
-            build/*.exe
-            build/*.app/**/*
-            build/*.bin
-            
+          path: build/WLEDAudioSyncRTMood-${{runner.os}}.*
+          
       - name: Create Release with Builds
         uses: ncipollo/release-action@v1
         with:
