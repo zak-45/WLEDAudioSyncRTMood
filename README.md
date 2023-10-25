@@ -90,7 +90,7 @@ Put your donwloaded file on a nice folder (stay organized) and ...
 just run it ! 
 ```
 
-How to run the python file :
+For Manual install:
 
 Any OS:
 ```
