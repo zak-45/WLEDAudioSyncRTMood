@@ -152,3 +152,6 @@ Trained models scikit-learn==0.23.2
 A 5 seconds delay is present, necessary time to capture and estimate mood. This is by default but can be changed with option -cs.
 
 Confirmed to work with python 3.8.9, other versions need deep analysis.
+
+Compiled versions made with Nuitka : https://github.com/Nuitka/Nuitka
+
