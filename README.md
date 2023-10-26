@@ -2,6 +2,8 @@
 
 Real Time Music mood detection. Generating colors based on. Send data to OSC server.
 ---
+[![Cross Compile Manual workflow](https://github.com/zak-45/WLEDAudioSyncRTMood/actions/workflows/manual.yml/badge.svg)](https://github.com/zak-45/WLEDAudioSyncRTMood/actions/workflows/manual.yml)
+
 ![Geneva-Emotion-Wheel-Scherer-2005](https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/cd41abaf-f6cd-4543-bad3-118f1fc1c331)
 
 ---
