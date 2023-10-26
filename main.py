@@ -45,6 +45,7 @@ restart script to free memory
 """
 def prog_restart():
     print("restarting ....")
+    print(sys.executable)
     if "python" in sys.executable:
         print(sys.argv)
         os.execv(sys.executable, [os.path.basename(sys.executable)] + sys.argv)
@@ -316,7 +317,7 @@ def parse_arguments():
     record_analyze.add_argument("-r", "--restart", type=int,
                                   choices=range(0,3601),
                                   metavar="[0-3600]",
-                                  default=120, help="Number of x * 5s before restarting prog , 0 for never..  default to 120 --> '10 minutes'")
+                                  default=0, help="Number of x * 5s before restarting prog , 0 for never..  default to 0")
     return record_analyze.parse_args()
 
 
