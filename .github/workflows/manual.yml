@@ -66,7 +66,7 @@ jobs:
           nuitka-version: main
           script-name: main.py          
           onefile: true
-          onefile-tempdir-spec: ./WLEDAudioSyncRTMood-${{runner.os}}
+          onefile-tempdir-spec: ./WLEDAudioSyncRTMood
           include-data-dir: assets=assets
           output-file: WLEDAudioSyncRTMood-${{runner.os}}
 
