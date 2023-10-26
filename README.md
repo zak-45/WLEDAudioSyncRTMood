@@ -47,7 +47,7 @@ optional arguments:
   -v {Y,N}, --verbose {Y,N}
                         display verbose informations, default to N
   -r [0-3600], --restart [0-3600]
-                        Number of x * 5s before restarting prog , 0 for never..  default to 120 --> '10 minutes'
+                        Number of x * 5s before restarting prog , 0 for never..  default to 0'
 ```
 
 ## Install
