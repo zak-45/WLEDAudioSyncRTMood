@@ -65,8 +65,7 @@ jobs:
         with:
           nuitka-version: main
           script-name: main.py          
-          # onefile: true
-          standalone: true
+          onefile: true
           include-data-dir: assets=assets
           output-file: WLEDAudioSyncRTMood-${{runner.os}}
 
@@ -75,8 +74,7 @@ jobs:
         with:
           name: ${{runner.os}} Build
           if-no-files-found: warn
-          # path: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
-          path: 'build/main.dist/**'
+          path: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
             
       - name: Create Release with Builds
         uses: ncipollo/release-action@v1
@@ -84,6 +82,5 @@ jobs:
           allowUpdates: true
           commit: main
           tag: ${{github.event.inputs.mytag}}
-          artifacts: 'build/main.dist/**'
-          # artifacts: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
+          artifacts: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
           
