@@ -64,9 +64,14 @@ jobs:
         uses: Nuitka/Nuitka-Action@v0.6
         with:
           nuitka-version: main
-          script-name: main.py          
+          script-name: main.py
+          company-name: zak-45
+          file-version: ${{github.event.inputs.mytag}}
+          windows-icon-from-ico: assets/WLEDAudioSync30.ico
+          linux-icon: assets/WLEDAudioSync30.ico
+          macos-app-icon: assets/WLEDAudioSync30.ico
           onefile: true
-          onefile-tempdir-spec: './WLEDAudioSyncRTMood'
+          onefile-tempdir-spec: ./WLEDAudioSyncRTMood
           include-data-dir: assets=assets
           output-file: WLEDAudioSyncRTMood-${{runner.os}}
 
