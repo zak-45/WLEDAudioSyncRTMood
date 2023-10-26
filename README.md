@@ -108,9 +108,10 @@ python main.py -v Y -sc Y
 
 https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/75f0d9dd-4aa1-4d72-91fd-24a6bf756cdd
 
----
+
 More on Youtube : https://youtu.be/x5OvCFWevbo?feature=shared
----
+
+
 ### Python modules 
 
 This is the name and version of python modules found on the Windows portable version
