@@ -81,7 +81,7 @@ jobs:
           if-no-files-found: warn
           path: 'build/WLEDAudioSyncRTMood-${{runner.os}}**'
             
-      - name: Create Release with Builds
+      - name: Create Release ${{github.event.inputs.mytag}} with Builds from Nuitka
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
