@@ -169,7 +169,7 @@ Confirmed to work with python 3.8.9, other versions need deep analysis.
 
 Compiled versions made with Nuitka : https://github.com/Nuitka/Nuitka
 ```
-First time you run WLEDAudioSyncRTMood-*, this will create folder ./WLEDAudioSyncRTMood and extract all files on it.
+First time you run WLEDAudioSyncRTMood-{OS}, this will create folder ./WLEDAudioSyncRTMood and extract all files on it.
 To save some space and time, you can then delete WLEDAudioSyncRTMood-* and run the app from created folder.
 ```
 
