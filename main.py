@@ -240,7 +240,7 @@ def record_audio(block_size, devices, use_yeelight_bulbs=False, fs=8000):
 
                     client.send_message("/WLEDAudioSync/mood/data", oscdata)
 
-            all_data += mid_buf
+            # all_data += mid_buf
             mid_buf = []
 
             h, w, _ = img.shape
