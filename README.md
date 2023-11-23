@@ -10,7 +10,7 @@ Real Time Music mood detection. Generating colors based on. Send data to OSC ser
 ![image](https://github.com/zak-45/WLEDAudioSyncRTMood/assets/121941293/640b9066-5b66-4867-83c3-49d6bb669354)
 
 
-This python script records sound and - when music is detected - it estimates the underlying mood (emotion). Based on that it generates a respective color. If available, it can even set your Yeelight Bulb color (again based on the detected musical mood). 
+This python script capture sound and - when music is detected - it estimates the underlying mood (emotion). Based on that it generates a respective color. If available, it can even set your Yeelight Bulb color (again based on the detected musical mood). 
 
 See this repo : https://github.com/tyiannak/color_your_music_mood for more informations. Thanks to @tyiannak for this great work.
 
